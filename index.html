@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veritabanı Yönetim Sistemleri Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Veritabanı Yönetim Sistemleri Quiz</h1>
+            <p>Dr. Öğr. Üyesi Bayram AKGÜL - BTS304</p>
+        </header>
+
+        <div class="quiz-info">
+            <div class="info-item">
+                <span>Soru: </span>
+                <span id="current-question">1</span>
+                <span> / </span>
+                <span id="total-questions">32</span>
+            </div>
+            <div class="info-item">
+                <span>Doğru: </span>
+                <span id="correct-count">0</span>
+            </div>
+            <div class="info-item">
+                <span>Yanlış: </span>
+                <span id="wrong-count">0</span>
+            </div>
+        </div>
+
+        <div class="quiz-container">
+            <div class="question-card" id="question-card">
+                <div class="question-number">
+                    <span id="question-number">Soru 1</span>
+                </div>
+                <div class="question-text" id="question-text">
+                    <!-- Soru metni buraya gelecek -->
+                </div>
+                <div class="options" id="options">
+                    <!-- Seçenekler buraya gelecek -->
+                </div>
+                <div class="code-area" id="code-area" style="display: none;">
+                    <textarea id="code-input" placeholder="SQL kodunuzu buraya yazın..."></textarea>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" onclick="prevQuestion()" disabled>← Önceki</button>
+                <button id="next-btn" onclick="nextQuestion()">Sonraki →</button>
+            </div>
+        </div>
+
+        <div class="result-container" id="result-container" style="display: none;">
+            <h2>Quiz Tamamlandı!</h2>
+            <div class="result-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Toplam Soru:</span>
+                    <span class="stat-value" id="total-result">32</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Doğru Cevap:</span>
+                    <span class="stat-value" id="correct-result">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Yanlış Cevap:</span>
+                    <span class="stat-value" id="wrong-result">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Başarı Oranı:</span>
+                    <span class="stat-value" id="success-rate">0%</span>
+                </div>
+            </div>
+            <button onclick="restartQuiz()" class="restart-btn">Yeniden Başla</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
